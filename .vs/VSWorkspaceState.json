@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lang\\en",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\layout",
+    "\\resources\\views\\layout\\partials",
+    "\\storage\\framework",
+    "\\storage\\framework\\cache",
+    "\\storage\\framework\\sessions",
+    "\\storage\\framework\\testing"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\resources\\views\\welcome.blade.php",
   "PreviewInSolutionExplorer": false
 }
