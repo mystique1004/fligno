@@ -16,7 +16,7 @@ function App() {
         <Navbar bg="primary">
             <Container>
                 <Link to={"/"} className="navbar-brand text-white">
-                   Fligno CRUD React
+                    Fligno CRUD React
                 </Link>
             </Container>
         </Navbar>
