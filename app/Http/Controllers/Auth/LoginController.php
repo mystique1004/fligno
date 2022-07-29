@@ -18,13 +18,33 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            $user = Auth::user();
+
+            return response()->json($user);
+        }
+
+        return response()->json([
+            'errors' => [
+                'email' => 'The provided credentials do not match our records.',
+                ]
+        ], 422);
+    }
 
     use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
      *
-     * @var string
+     * @var string  
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 

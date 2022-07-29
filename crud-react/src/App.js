@@ -10,14 +10,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import EditProduct from "./components/product/edit.component";
 import ProductList from "./components/product/list.component";
 import CreateProduct from "./components/product/create.component";
+import Login from "./Login/Login";
 
 function App() {
     return (<Router>
         <Navbar bg="primary">
             <Container>
                 <Link to={"/"} className="navbar-brand text-white">
-                    Fligno CRUD React
+                    Fligno CRUD React test
                 </Link>
+                
             </Container>
         </Navbar>
 
@@ -28,11 +30,15 @@ function App() {
                         <Route path="/product/create" element={<CreateProduct />} />
                         <Route path="/product/edit/:id" element={<EditProduct />} />
                         <Route exact path='/' element={<ProductList />} />
+                        
                     </Routes>
                 </Col>
             </Row>
         </Container>
     </Router>);
+   
 }
 
 export default App;
+
+
